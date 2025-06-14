@@ -25,6 +25,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{BB
 		JsonSerializer.cs = JsonSerializer.cs
 	EndProjectSection
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "FireLine.Core.Testing", "FireLine.Core.Testing", "{5FECEC10-13B0-4B3F-B0EF-D01690045634}"
+	ProjectSection(SolutionItems) = preProject
+		FirelineSerializerIntegrationTests.cs = FirelineSerializerIntegrationTests.cs
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -35,6 +40,7 @@ Global
 		{D4799F06-852E-405E-8DCC-0DB1DE8DAC69} = {9248E88B-0C2D-4C08-B12E-E9C97A597BB7}
 		{99DBD60A-EEBE-4F60-A1CF-B543357B193E} = {9248E88B-0C2D-4C08-B12E-E9C97A597BB7}
 		{BB526B32-F619-453E-A976-D909CBA4C358} = {9248E88B-0C2D-4C08-B12E-E9C97A597BB7}
+		{5FECEC10-13B0-4B3F-B0EF-D01690045634} = {9248E88B-0C2D-4C08-B12E-E9C97A597BB7}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {478F5354-8C51-42DB-8112-81BB37ED90F5}
