@@ -1,0 +1,42 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Fireline.Core", "Fireline.Core", "{9248E88B-0C2D-4C08-B12E-E9C97A597BB7}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Configuration", "Configuration", "{9274DAB9-73D6-4856-BEB3-3A78F7C11AFA}"
+	ProjectSection(SolutionItems) = preProject
+		Database.Config.cs = Database.Config.cs
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Models", "Models", "{D4799F06-852E-405E-8DCC-0DB1DE8DAC69}"
+	ProjectSection(SolutionItems) = preProject
+		IAP-Model.Json = IAP-Model.Json
+		IncidentBasic.cs = IncidentBasic.cs
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Interfaces", "Interfaces", "{99DBD60A-EEBE-4F60-A1CF-B543357B193E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{BB526B32-F619-453E-A976-D909CBA4C358}"
+	ProjectSection(SolutionItems) = preProject
+		JsonSerializer.cs = JsonSerializer.cs
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{9248E88B-0C2D-4C08-B12E-E9C97A597BB7} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
+		{9274DAB9-73D6-4856-BEB3-3A78F7C11AFA} = {9248E88B-0C2D-4C08-B12E-E9C97A597BB7}
+		{D4799F06-852E-405E-8DCC-0DB1DE8DAC69} = {9248E88B-0C2D-4C08-B12E-E9C97A597BB7}
+		{99DBD60A-EEBE-4F60-A1CF-B543357B193E} = {9248E88B-0C2D-4C08-B12E-E9C97A597BB7}
+		{BB526B32-F619-453E-A976-D909CBA4C358} = {9248E88B-0C2D-4C08-B12E-E9C97A597BB7}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {478F5354-8C51-42DB-8112-81BB37ED90F5}
+	EndGlobalSection
+EndGlobal

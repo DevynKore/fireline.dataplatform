@@ -1,0 +1,184 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Fire Incident Situational Awareness",
+  "type": "object",
+  "required": [ "incident_id", "incident_name", "location", "fire_status", "weather" ],
+  "properties": {
+    "incident_id": {
+      "type": "string",
+      "description": "Unique identifier for the incident"
+    },
+    "incident_name": {
+      "type": "string",
+      "description": "Fire incident name"
+    },
+    "incident_type": {
+      "type": "string",
+      "description": "Type of incident"
+    },
+    "discovery_date": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Date and time when the incident was discovered"
+    },
+    "start_date": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Date and time when the incident started"
+    },
+    "controlled_date": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Date and time when the incident was controlled"
+    },
+    "extinguished_date": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Date and time when the incident was extinguished"
+    },
+    "state": {
+      "type": "string",
+      "description": "State where the incident occurred"
+    },
+    "county": {
+      "type": "string",
+      "description": "County where the incident occurred"
+    },
+    "responsible_agency": {
+      "type": "string",
+      "description": "Agency responsible for the incident"
+    },
+    "incident_commander_name": {
+      "type": "string",
+      "description": "Name of the incident commander"
+    },
+    "cause_description": {
+      "type": "string",
+      "description": "Description of what caused the incident"
+    },
+    "incident_description": {
+      "type": "string",
+      "description": "General description of the incident"
+    },
+    "primary_resource_assigned": {
+      "type": "string",
+      "enum": [ "Engine", "HandCrew", "Helicopter", "Bulldozer", "WaterTender", "AirTanker" ],
+      "description": "Primary resource type assigned to the incident"
+    },
+    "current_status": {
+      "type": "string",
+      "description": "Current status of the incident"
+    },
+    "priority_level": {
+      "type": "integer",
+      "minimum": 1,
+      "description": "Priority level of the incident"
+    },
+    "location": {
+      "type": "object",
+      "required": [ "latitude", "longitude" ],
+      "properties": {
+        "latitude": {
+          "type": "number",
+          "minimum": -90,
+          "maximum": 90,
+          "description": "Latitude coordinate"
+        },
+        "longitude": {
+          "type": "number",
+          "minimum": -180,
+          "maximum": 180,
+          "description": "Longitude coordinate"
+        },
+        "address": {
+          "type": "string",
+          "description": "Street address or location description"
+        },
+        "elevation": {
+          "type": "number",
+          "description": "Elevation in feet"
+        }
+      }
+    },
+    "fire_status": {
+      "type": "object",
+      "required": [ "acres_burned", "percent_contained" ],
+      "properties": {
+        "acres_burned": {
+          "type": "number",
+          "minimum": 0,
+          "description": "Number of acres burned"
+        },
+        "percent_contained": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 100,
+          "description": "Percentage of fire contained"
+        },
+        "fire_behavior": {
+          "type": "string",
+          "enum": [ "minimal", "moderate", "active", "extreme" ],
+          "description": "Current fire behavior assessment"
+        },
+        "last_updated": {
+          "type": "string",
+          "format": "date-time",
+          "description": "When the fire status was last updated"
+        },
+        "perimeter_miles": {
+          "type": "number",
+          "minimum": 0,
+          "description": "Fire perimeter in miles"
+        }
+      }
+    },
+    "weather": {
+      "type": "object",
+      "properties": {
+        "wind_speed": {
+          "type": "number",
+          "minimum": 0,
+          "description": "Wind speed in miles per hour"
+        },
+        "wind_direction": {
+          "type": "string",
+          "pattern": "^(N|NE|E|SE|S|SW|W|NW)$",
+          "description": "Primary wind direction"
+        },
+        "relative_humidity": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 100,
+          "description": "Relative humidity percentage"
+        },
+        "temperature_fahrenheit": {
+          "type": "number",
+          "description": "Temperature in Fahrenheit"
+        },
+        "observation_time": {
+          "type": "string",
+          "format": "date-time",
+          "description": "When the weather observation was made"
+        },
+        "red_flag_warning": {
+          "type": "object",
+          "properties": {
+            "active": {
+              "type": "boolean",
+              "description": "Whether a red flag warning is currently active"
+            },
+            "expires": {
+              "type": "string",
+              "format": "date-time",
+              "description": "When the red flag warning expires"
+            },
+            "issuing_office": {
+              "type": "string",
+              "description": "Office that issued the red flag warning"
+            }
+          }
+        }
+      }
+    }
+  }
+}
